@@ -51,6 +51,9 @@ const testimonials = [
   },
 ]
 
+const whatsappNumber = '6281234567890'
+const whatsappHref = `https://wa.me/${whatsappNumber}`
+
 function LogoMark() {
   return (
     <div className="logo" aria-label="QLA Logo">
@@ -72,8 +75,8 @@ function App() {
             <a href="#how">How it Works</a>
             <a href="#contact">Contact</a>
           </nav>
-          <a href="#contact" className="btn btn-sm btn-gold">
-            Book Appointment
+          <a href={whatsappHref} className="btn btn-sm btn-whatsapp" target="_blank" rel="noreferrer">
+            WhatsApp Admin
           </a>
         </div>
       </header>
@@ -95,9 +98,13 @@ function App() {
                 <a className="btn btn-outline" href="#services">
                   Lihat Layanan
                 </a>
+                <a className="btn btn-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">
+                  Chat via WhatsApp
+                </a>
               </div>
             </div>
             <div className="hero-card">
+              <span className="chip">Premium Care Guarantee</span>
               <h3>QLA Signature Promise</h3>
               <p>
                 Luxury clinic meets modern wellness: high-standard care, precise assessment, and a warm premium experience for healthy aging
@@ -228,13 +235,17 @@ function App() {
               <a className="btn btn-gold" href="mailto:admin@qla.co.id">
                 Book Appointment
               </a>
-              <a className="btn btn-outline" href="https://wa.me/620000000000" target="_blank" rel="noreferrer">
-                Hubungi Admin
+              <a className="btn btn-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer">
+                Konsultasi WhatsApp
               </a>
             </div>
           </div>
         </section>
       </main>
+
+      <a className="floating-wa" href={whatsappHref} target="_blank" rel="noreferrer" aria-label="Chat via WhatsApp">
+        WhatsApp
+      </a>
 
       <footer className="footer">
         <div className="container footer-grid">
@@ -251,7 +262,9 @@ function App() {
           <div>
             <h4>Kontak</h4>
             <a href="mailto:admin@qla.co.id">admin@qla.co.id</a>
-            <a href="tel:+620000000000">+62 000 0000 0000</a>
+            <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer">
+              +62 812 3456 7890
+            </a>
             <p>Jakarta, Indonesia</p>
           </div>
           <div>
