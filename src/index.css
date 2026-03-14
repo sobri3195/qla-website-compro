@@ -497,13 +497,22 @@ details p {
   right: 1rem;
   bottom: 1rem;
   z-index: 30;
-  padding: 0.8rem 1rem;
-  border-radius: 999px;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
   background: var(--wa);
-  color: #093c1f;
-  font-weight: 700;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #1ebd58;
   box-shadow: 0 10px 22px rgba(17, 104, 52, 0.35);
+}
+
+.floating-wa svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: currentColor;
 }
 
 .footer {
@@ -616,8 +625,7 @@ details p {
   }
 
   .floating-wa {
-    left: 1rem;
     right: 1rem;
-    text-align: center;
+    left: auto;
   }
 }
